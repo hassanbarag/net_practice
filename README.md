@@ -15,8 +15,6 @@ The primary goal is to understand how IP addressing, subnetting, and routing wor
 
 ## 📸 Level Solutions & Visualizations
 
-Taabo (click) level kasta oo hoose si aad u aragto sawirka xalka iyo qaab-dhismeedka network-ka:
-
 <details>
 <summary><b>🔹 Level 1 Solution</b></summary>
 <br>
