@@ -1,109 +1,88 @@
-*This project has been created as part of the 42 curriculum by hassamoh.*
+# 🌐 NetPractice — 42 Network Configuration Project
 
-# NetPractice
+NetPractice is a networking project from the 42 curriculum designed to introduce the fundamentals of IPv4 networking through practical exercises. The project features simulated networks where devices must be configured correctly to achieve complete connectivity across 10 increasing levels of complexity.
 
-## Description
+---
 
-NetPractice is a networking project from the 42 curriculum. It introduces the fundamentals of IPv4 networking through practical exercises in which small simulated networks must be configured so that their devices can communicate.
+## 💡 About the Project
 
-The project contains **10 levels**. Each level provides a network diagram with one or more connectivity goals. To solve a level, the learner adjusts the available network settings, checks the result, and investigates the logs when communication fails.
+The primary goal is to understand how IP addressing, subnetting, and routing work together in practice:
+* **IPv4 Addressing & Subnetting**: Managing private IP ranges and CIDR notation.
+* **Switches & Routers**: Connecting clients within the same subnet or across different subnets.
+* **Routing Tables**: Configuring gateways and paths to ensure packets successfully reach their destination.
 
-The objective is to understand how IP addressing and routing work together, not simply to make a configuration pass.
+---
 
-## Instructions
+## 📸 Level Solutions & Visualizations
 
-### 1. Launch the training interface
+Taabo (click) level kasta oo hoose si aad u aragto sawirka xalka iyo qaab-dhismeedka network-ka:
 
-1. Download the NetPractice archive from the project page.
-2. Extract the archive into a directory of your choice.
-3. Open a terminal in the extracted directory.
-4. Run the supplied script:
+<details>
+<summary><b>🔹 Level 1 Solution</b></summary>
+<br>
 
-   ```bash
-   ./run.sh
-   ```
+![Level 1](images/Level1.png)
+</details>
 
-If the script does not work, start a local web server manually from the extracted directory:
+<details>
+<summary><b>🔹 Level 2 Solution</b></summary>
+<br>
 
-```bash
-python3 -m http.server 49242
-```
+![Level 2](images/Level2.png)
+</details>
 
-Then open [http://localhost:49242](http://localhost:49242) in your browser.
+<details>
+<summary><b>🔹 Level 3 Solution</b></summary>
+<br>
 
-### Concepts
+![Level 3](images/Level3.png)
+</details>
 
-- **Client IP:** Client IP addresses must not overlap with other client IP addresses.
-- **Switch:** A switch connects clients in the same subnet.
-- **Router:** A router connects different subnets.
-- **Routing Table:** Routes are configured using source and destination IP addresses with CIDR notation, such as `0.0.0.0/0`.
-- **Private IP Addresses:** Private IP addresses are not directly accessible from the internet.
+<details>
+<summary><b>🔹 Level 4 Solution</b></summary>
+<br>
 
-Private IP ranges:
+![Level 4](images/Level4.jpeg)
+</details>
 
-- `10.0.0.0` – `10.255.255.255`
-- `172.16.0.0` – `172.31.255.255`
-- `192.168.0.0` – `192.168.255.255`
+<details>
+<summary><b>🔹 Level 5 Solution</b></summary>
+<br>
 
-**Loopback IP range — do not set as a local network IP:**
+![Level 5](images/Level5.png)
+</details>
 
-- `127.0.0.1` – `127.255.255.254`
+<details>
+<summary><b>🔹 Level 6 Solution</b></summary>
+<br>
 
-### Steps to Solve a Problem
+![Level 6](images/Level6.png)
+</details>
 
-1. Check the CIDR notation or subnet mask.
-2. Check the specific client IP address that is assigned.
-3. Calculate the available IP range in the subnet.
-4. Configure the routing table according to the problem's goals.
+<details>
+<summary><b>🔹 Level 7 Solution</b></summary>
+<br>
 
-### CIDR Sheet Table
+![Level 7](images/Level7.png)
+</details>
 
-| Address | Total Addresses | Usable Hosts | Netmask |
-|---|---:|---:|---|
-| `/30` | 4 | 2 | `255.255.255.252` |
-| `/29` | 8 | 6 | `255.255.255.248` |
-| `/28` | 16 | 14 | `255.255.255.240` |
-| `/27` | 32 | 30 | `255.255.255.224` |
-| `/26` | 64 | 62 | `255.255.255.192` |
-| `/25` | 128 | 126 | `255.255.255.128` |
-| `/24` | 256 | 254 | `255.255.255.0` |
-| `/18` | 16,384 | 16,382 | `255.255.192.0` |
-| `/16` | 65,536 | 65,534 | `255.255.0.0` |
+<details>
+<summary><b>🔹 Level 8 Solution</b></summary>
+<br>
 
+![Level 8](images/Level8.png)
+</details>
 
-## Resources
+<details>
+<summary><b>🔹 Level 9 Solution</b></summary>
+<br>
 
-**NetPractice project instructions:** Documentation provided with the 42 project.
-- **Networking tutorial — YouTube:** https://www.youtube.com/watch?v=BWZ-MHIhqjM
-- **Classless Inter-Domain Routing (CIDR):** https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
-- **CIDR Calculator:** https://cidr.xyz/
-- **Broadcast Address:** https://en.wikipedia.org/wiki/Broadcast_address
-- **RFC 791 — Internet Protocol:** https://www.rfc-editor.org/rfc/rfc791
-- **Cisco Networking Resources:** https://www.cisco.com/
+![Level 9](images/Level9.png)
+</details>
 
-The main concepts studied during this project include:
+<details>
+<summary><b>🔹 Level 10 Solution</b></summary>
+<br>
 
-- TCP/IP and IPv4 addressing.
-- Subnet masks and CIDR notation.
-- Network IDs, broadcast addresses, and usable host ranges.
-- Default gateways.
-- Routers, switches, and network interfaces.
-- Routing tables and default routes.
-- Public and private IP addresses.
-- Packet forwarding and return routes.
-- Network connectivity troubleshooting.
-
-### Use of Artificial Intelligence
-
-Artificial intelligence tools, including ChatGPT, were used as learning and documentation support during this project.
-
-AI assistance was used to:
-
-- Explain IPv4 addressing, subnet masks, CIDR notation, network IDs, broadcast addresses, and usable host ranges.
-- Clarify the roles of routers, switches, default gateways, and routing tables.
-- Interpret NetPractice diagnostic logs and explain possible causes of connectivity problems.
-- Support understanding of packet forwarding and routing in both directions.
-- Help organize and write this README in accordance with the project requirements.
-
-AI was used to support learning and documentation. Network configurations were tested in the NetPractice training interface, and the concepts were reviewed to improve understanding of the reasoning behind each configuration.
-
+![Level 10](images/Level10.png)
+</details>
